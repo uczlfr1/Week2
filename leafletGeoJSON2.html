@@ -28,7 +28,8 @@ var earthquakelayer;
 function getEarthquakes() {
  client = new XMLHttpRequest();
  client.open('GET','https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson');
- client.onreadystatechange = earthquakeResponse; // note don't use earthquakeResponse() with brackets as that doesn't work
+ client.onreadystatechange = earthquakeResponse; 
+ // note don't use earthquakeResponse() with brackets as that doesn't work
  client.send();
 }
 // create the code to wait for the response from the data server, and process the response once it is received
